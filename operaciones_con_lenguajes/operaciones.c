@@ -151,7 +151,7 @@ lenguaje Potencia_Lenguaje(lenguaje A, int Potencia)
         // Generar las potencias del lenguaje
         for (int p = 1; p < Potencia; p++)
         {
-            resultado = Concatenar_Elementos(resultado, A);
+            resultado = Concatenar_Lenguajes(resultado, A);
         }
         return resultado;
     }
@@ -161,7 +161,7 @@ lenguaje Potencia_Lenguaje(lenguaje A, int Potencia)
         // Generar las potencias del lenguaje
         for (int p = 1; p < abs(Potencia); p++)
         {
-            resultado = Concatenar_Elementos(resultado, A);
+            resultado = Concatenar_Lenguajes(resultado, A);
         }
 
         // Invertir cada cadena del resultado
