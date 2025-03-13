@@ -34,3 +34,12 @@ char *Obtener_Estado_Inicial(FILE *Archivo, int LineaObjetivo);
 
 // Lee el archivo de texto y obtiene todas las transiciones dadas desde la línea objetivo hasta el final del archivo
 transiciones Obtener_Transiciones(FILE *Archivo, int LineaObjetivo);
+
+// Crea un autómata finito no determinista a partir de las tuplas y transiciones obtenidas
+quintupla Crear_AFND(tupla Estados, tupla Alfabeto, char *EstadoInicial, tupla EstadosAceptacion, transiciones FuncionTransicion);
+
+int Transicion_Existe(transiciones FuncionTransicion, char *EstadoActual, char Simbolo);
+
+int Existe_Transicion_Error(transiciones FuncionTransicion);
+
+transiciones Agregar_Transiciones_Faltantes(transiciones FuncionTransicion, tupla Estados, tupla Alfabeto);
