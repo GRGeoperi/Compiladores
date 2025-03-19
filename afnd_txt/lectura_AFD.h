@@ -43,3 +43,9 @@ int Transicion_Existe(transiciones FuncionTransicion, char *EstadoActual, char S
 int Existe_Transicion_Error(transiciones FuncionTransicion);
 
 transiciones Agregar_Transiciones_Faltantes(transiciones FuncionTransicion, tupla Estados, tupla Alfabeto);
+
+void Procesar_Cadena_AFND(quintupla AFND, const char *cadena, char *estadoActual, int indice, char *camino, int *aceptada);
+
+int Procesar_Cadena(quintupla AFND, const char *cadena);
+
+void Guardar_AFND(quintupla AFND, const char *nombreArchivo);
