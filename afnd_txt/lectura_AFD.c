@@ -169,6 +169,8 @@ transiciones Agregar_Transiciones_Faltantes(transiciones FuncionTransicion, tupl
     return FuncionTransicion;
 }
 
+// ...existing code...
+
 void Procesar_Cadena_AFND(quintupla AFND, const char *cadena, char *estadoActual, int indice, char *camino, int *aceptada)
 {
     if (cadena[indice] == '\0')
@@ -198,7 +200,7 @@ void Procesar_Cadena_AFND(quintupla AFND, const char *cadena, char *estadoActual
 
     if (!simboloValido)
     {
-        printf("Símbolo '%c' no pertenece al alfabeto. Intentando sin este símbolo.\n", simbolo);
+        printf("Símbolo '%c' no pertenece al alfabeto en el estado '%c'. Intentando sin este símbolo.\n", simbolo, *estadoActual);
         Procesar_Cadena_AFND(AFND, cadena, estadoActual, indice + 1, camino, aceptada);
         return;
     }
