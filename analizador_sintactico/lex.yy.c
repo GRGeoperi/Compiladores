@@ -762,7 +762,7 @@ case 2:
 YY_RULE_SETUP
 #line 8 "ejemplo.l"
 {
-    printf("Numero enetero %s\n", yytext);
+    printf("Numero entero %s\n", yytext);
 }
 	YY_BREAK
 case 3:

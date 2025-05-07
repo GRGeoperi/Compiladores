@@ -6,7 +6,7 @@ NUM [0-9]+
 }
 
 {NUM} {
-    printf("Numero enetero %s\n", yytext);
+    printf("Numero entero %s\n", yytext);
 }
 
 "+"|"*" {
