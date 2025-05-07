@@ -169,8 +169,6 @@ transiciones Agregar_Transiciones_Faltantes(transiciones FuncionTransicion, tupl
     return FuncionTransicion;
 }
 
-// ...existing code...
-
 void Procesar_Cadena_AFND(quintupla AFND, const char *cadena, char *estadoActual, int indice, char *camino, int *aceptada)
 {
     if (cadena[indice] == '\0')
