@@ -7,6 +7,7 @@ resta [-]?[0-9]+(\.[0-9]+)?-[-]?[0-9]+(\.[0-9]+)?
 multiplicacion [-]?[0-9]+(\.[0-9]+)?\*[-]?[0-9]+(\.[0-9]+)?
 division [-]?[0-9]+(\.[0-9]+)?"/"[-]?[1-9][0-9]*(\.[0-9]+)?
 modulo [-]?[0-9]+%[-]?[1-9][0-9]*
+cadenas \".*\"
 %%
 {variable} {
     printf("Nombre de variable");
@@ -42,4 +43,8 @@ modulo [-]?[0-9]+%[-]?[1-9][0-9]*
 
 {modulo} {
     printf("Operación de módulo");
+}
+
+{cadenas} {
+    printf("Es una cadena");
 }
